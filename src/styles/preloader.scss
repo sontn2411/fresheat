@@ -1,0 +1,63 @@
+.spinner {
+  width: 9rem;
+  height: 9rem;
+  border: 3px solid rgba(0, 0, 0, 0.2);
+  border-bottom-color: #eb0029;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+.loaderSection {
+  .bg {
+    background-color: #02142a;
+    height: 100%;
+    left: 0;
+    width: 100%;
+    transition: all 800ms cubic-bezier(0.77, 0, 0.175, 1);
+  }
+}
+
+.loaded {
+  .animationPreloader {
+    opacity: 0;
+    transition: 0.3s ease-out;
+  }
+  .loaderSection {
+    .bg {
+      width: 0 !important;
+      transition: 0.7s !important;
+      background-color: white !important;
+    }
+  }
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes letters-loading {
+  0%,
+  75%,
+  100% {
+    opacity: 0;
+    transform: rotateY(-90deg);
+  }
+  25%,
+  50% {
+    opacity: 1;
+    transform: rotateY(0deg);
+  }
+}
+
+@media (max-width: 767px) {
+  .txtLoading {
+    font-size: 2.5em;
+  }
+}
