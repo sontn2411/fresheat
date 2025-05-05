@@ -15,3 +15,13 @@ export interface SettingDataType {
     Instagram: string
   }
 }
+
+export interface SettingSectionType {
+  data: SettingSectionItem[]
+}
+
+export interface SettingSectionItem {
+  id: number
+  name: string
+  index: number
+}
