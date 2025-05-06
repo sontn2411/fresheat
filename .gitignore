@@ -1,5 +1,6 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
+/src/app/generated/prisma
 # dependencies
 /node_modules
 /.pnp
@@ -9,8 +10,6 @@
 !.yarn/plugins
 !.yarn/releases
 !.yarn/versions
-
-/src/app/generated
 
 # testing
 /coverage
