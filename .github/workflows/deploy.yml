@@ -21,7 +21,7 @@ jobs:
           username: ${{ secrets.EC2_USER }}
           key: ${{ secrets.EC2_KEY }}
           script: |
-            cd /home/ec2-user/project/nextjs-ci-cd
+            cd /home/ec2-user/project/fresheat
             git pull origin main
             npm install
             npm run build
