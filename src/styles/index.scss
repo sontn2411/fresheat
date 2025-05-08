@@ -1,1 +1,23 @@
 @use './preloader.scss';
+
+.title-footer {
+  position: relative;
+  &::before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: '';
+    width: 25px;
+    height: 2px;
+    background-color: #fc791a;
+  }
+  &::after {
+    position: absolute;
+    bottom: 0;
+    left: 40px;
+    content: '';
+    width: 55px;
+    height: 2px;
+    background-color: white;
+  }
+}
