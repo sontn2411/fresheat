@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 'use client'
 
 import { DndContext, closestCenter } from '@dnd-kit/core'
@@ -46,18 +47,15 @@ function SortableItem({ id, children }: SortableItemProps) {
   )
 }
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const ContentPage = ({
   dataHome,
   settingSection,
 }: {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   dataHome: any
   settingSection: SettingSectionItem[]
 }) => {
   const [data, setData] = useState(settingSection)
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const handleDragEnd = (event: any) => {
     const { active, over } = event
 
