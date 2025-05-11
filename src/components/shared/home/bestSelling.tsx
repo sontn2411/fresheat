@@ -21,7 +21,7 @@ const BestSelling = ({ data }: BestSellingProps) => {
       <div className='flex flex-col justify-center items-center'>
         <TitleSection text='popular dishes' />
         <p className='text-[40px] font-black'>Best selling dishes</p>
-        <div className='flex w-full justify-center gap-4 pt-6'>
+        <div className='flex w-full justify-center gap-4 pt-6 flex-wrap'>
           {data.map((item) => {
             return (
               <Card

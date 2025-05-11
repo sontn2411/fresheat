@@ -3,6 +3,7 @@ import AboutUs from '@/components/shared/home/aboutUs'
 import Banner from '@/components/shared/home/banner'
 import BestFood from '@/components/shared/home/bestFood'
 import BestSelling from '@/components/shared/home/bestSelling'
+import LatestNew from '@/components/shared/home/latestNew'
 import TimeOfferFood from '@/components/shared/home/timeOfferFood'
 import { getHomeData, getSettingSection } from '@/lib/query'
 import React from 'react'
@@ -33,6 +34,7 @@ export default async function Home() {
           {item.name == 'BestSelling' && <BestSelling data={dataBestSelling} />}
         </React.Fragment>
       ))}
+      <LatestNew />
     </Layout>
   )
 }
