@@ -4,6 +4,7 @@ import Banner from '@/components/shared/home/banner'
 import BestFood from '@/components/shared/home/bestFood'
 import BestSelling from '@/components/shared/home/bestSelling'
 import FoodMenu from '@/components/shared/home/foodmenu'
+import LatestNew from '@/components/shared/home/latestNew'
 import TimeOfferFood from '@/components/shared/home/timeOfferFood'
 import { getHomeData, getSettingSection } from '@/lib/query'
 import React from 'react'
@@ -35,6 +36,7 @@ export default async function Home() {
           {item.name == 'FoodMenu' && <FoodMenu />}
         </React.Fragment>
       ))}
+      <LatestNew />
     </Layout>
   )
 }
