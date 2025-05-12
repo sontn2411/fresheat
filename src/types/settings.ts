@@ -50,11 +50,11 @@ export interface DataBot {
   }
   Item2: {
     Title: string
-    Links: { id: number; name: string; to: string }[]
+    Links: { Id: number; Name: string; To: string }[]
   }
   Item3: {
     Title: string
-    Links: { id: number; name: string; to: string }[]
+    Links: { Id: number; Name: string; To: string }[]
   }
   Item4: {
     Title: string
