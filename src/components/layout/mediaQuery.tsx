@@ -34,12 +34,13 @@ const MediaQueryContext = ({ children }: { children: ReactNode }) => {
 
   return (
     <>
+      <div
+        className='fixed inset-0 z-[1000]'
+        style={{ display: isLoading ? 'block' : 'none' }}
+      >
+        <LoadingGlobal isExiting={isExiting} />
+      </div>
       {children}
-      {isLoading && (
-        <div className='fixed inset-0 z-[1000]'>
-          <LoadingGlobal isExiting={isExiting} />
-        </div>
-      )}
     </>
   )
 }
