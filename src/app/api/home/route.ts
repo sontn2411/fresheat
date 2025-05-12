@@ -140,6 +140,73 @@ export async function GET() {
           'https://gramentheme.com/html/fresheat/assets/img/dishes/dishes1_5.png',
       },
     ],
+
+    Menus: [
+      {
+        id: 1,
+        nameCategory: 'Fast Food',
+        image:
+          'https://gramentheme.com/html/fresheat/assets/img/menu/menuIcon1_1.png',
+        items: [
+          {
+            id: 1,
+            name: 'Chinese Pasta',
+            desc: "It's a testament to our.",
+            price: 15.99,
+            image:
+              'https://gramentheme.com/html/fresheat/assets/img/menu/menuThumb1_1.png',
+          },
+          {
+            id: 1,
+            name: 'Chinese Pasta',
+            desc: "It's a testament to our.",
+            price: 15.99,
+            image:
+              'https://gramentheme.com/html/fresheat/assets/img/menu/menuThumb1_1.png',
+          },
+          {
+            id: 1,
+            name: 'Chinese Pasta',
+            desc: "It's a testament to our.",
+            price: 15.99,
+            image:
+              'https://gramentheme.com/html/fresheat/assets/img/menu/menuThumb1_1.png',
+          },
+        ],
+      },
+      {
+        id: 2,
+        nameCategory: 'Drink & Juice',
+        image:
+          'https://gramentheme.com/html/fresheat/assets/img/menu/menuIcon1_2.png',
+        items: [
+          {
+            id: 1,
+            name: 'Chinese Pasta',
+            desc: "It's a testament to our.",
+            price: 15.99,
+            image:
+              'https://gramentheme.com/html/fresheat/assets/img/menu/menuThumb1_1.png',
+          },
+          {
+            id: 1,
+            name: 'Chinese Pasta',
+            desc: "It's a testament to our.",
+            price: 15.99,
+            image:
+              'https://gramentheme.com/html/fresheat/assets/img/menu/menuThumb1_1.png',
+          },
+          {
+            id: 1,
+            name: 'Chinese Pasta',
+            desc: "It's a testament to our.",
+            price: 15.99,
+            image:
+              'https://gramentheme.com/html/fresheat/assets/img/menu/menuThumb1_1.png',
+          },
+        ],
+      },
+    ],
   }
 
   return new Response(JSON.stringify(data), {

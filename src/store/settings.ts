@@ -15,6 +15,38 @@ const useSettingStore = new Store<SettingDataType>({
     Twitter: '',
     Instagram: '',
   },
+  Footer: {
+    Top: [],
+    Bot: {
+      Item1: {
+        Logo: '',
+        Desc: '',
+        Socials: {
+          Facebook: '',
+          Twitter: '',
+          Instagram: '',
+        },
+      },
+      Item2: {
+        Title: '',
+        Links: [],
+      },
+      Item3: {
+        Title: '',
+        Links: [],
+      },
+      Item4: {
+        Title: '',
+        Time: {
+          Store: '',
+          Office: {
+            MondayToFriday: '',
+            Saturday: '',
+          },
+        },
+      },
+    },
+  },
 })
 
 const setDataSetting = (data: SettingDataType) => {

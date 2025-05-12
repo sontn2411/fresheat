@@ -20,7 +20,7 @@ const MediaQueryContext = ({ children }: { children: ReactNode }) => {
           setIsLoading(false)
         }, 500)
       }
-    }, 1000)
+    }, 500)
 
     return () => clearTimeout(timer)
   }, [isDesktop, isLaptop])

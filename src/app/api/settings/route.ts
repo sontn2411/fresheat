@@ -1,22 +1,9 @@
+import { settingData } from '@/data/data'
 import prisma from '@/lib/prisma'
 import { NextRequest, NextResponse } from 'next/server'
 
 export async function GET() {
-  const data = {
-    Logo: '/assets/logo.svg',
-    Time: {
-      Store: '09:00 AM - 06:00 PM',
-      Office: {
-        MondayToFriday: '08 AM - 04 PM',
-        Saturday: '09 AM - 12 AM',
-      },
-    },
-    Socials: {
-      Facebook: 'https://facebook.com/yourpage',
-      Twitter: 'https://twitter.com/yourpage',
-      Instagram: 'https://instagram.com/yourpage',
-    },
-  }
+  const data = settingData
 
   return new Response(JSON.stringify(data), {
     status: 200,

@@ -1,7 +1,10 @@
+import { settingData } from '@/data/data'
 import prisma from './prisma'
 
 const getSettingSection = async () => {
   const data = await prisma.setting.findMany()
+
+  data.push({ id: 5, index: 5, name: 'FoodMenu' })
 
   return data.sort((a, b) => a.index - b.index)
 }
@@ -154,21 +157,7 @@ const getHomeData = async () => {
 }
 
 const getSetting = async () => {
-  const data = {
-    Logo: '/assets/logo.svg',
-    Time: {
-      Store: '09:00 AM - 06:00 PM',
-      Office: {
-        MondayToFriday: '08 AM - 04 PM',
-        Saturday: '09 AM - 12 AM',
-      },
-    },
-    Socials: {
-      Facebook: 'https://facebook.com/yourpage',
-      Twitter: 'https://twitter.com/yourpage',
-      Instagram: 'https://instagram.com/yourpage',
-    },
-  }
+  const data = settingData
 
   return data
 }
