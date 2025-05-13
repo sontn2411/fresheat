@@ -1,3 +1,4 @@
+'use client'
 import { SettingDataType } from '@/types/settings'
 import { Store } from '@tanstack/react-store'
 
