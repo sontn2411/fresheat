@@ -4,8 +4,6 @@ import prisma from './prisma'
 const getSettingSection = async () => {
   const data = await prisma.setting.findMany()
 
-  data.push({ id: 5, index: 5, name: 'FoodMenu' })
-
   return data.sort((a, b) => a.index - b.index)
 }
 

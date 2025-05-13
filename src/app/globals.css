@@ -49,6 +49,7 @@
   --color-color-5: var(--color-5);
   --color-color-6: var(--color-6);
   --color-color-7: var(--color-7);
+  --color-color-8: var(--color-8);
 }
 
 :root {
@@ -92,6 +93,7 @@
   --color-5: #f4f1ea;
   --color-6: #5c6574;
   --color-7: #02142a;
+  --color-8: #f0f0f0;
 }
 
 .dark {

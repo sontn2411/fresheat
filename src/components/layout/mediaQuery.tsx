@@ -10,7 +10,6 @@ const MediaQueryContext = ({ children }: { children: ReactNode }) => {
   const isLaptop = useMediaQuery('(max-width: 1200px)')
   const [isLoading, setIsLoading] = useState(true)
   const [isExiting, setIsExiting] = useState(false)
-
   useEffect(() => {
     const timer = setTimeout(() => {
       if (isDesktop !== null && isLaptop !== null) {
