@@ -25,3 +25,11 @@ model Setting {
   index Int @unique
   name String
 }
+
+model Sections {
+  Id Int @id @default(autoincrement())
+  Title String 
+  Desc String 
+  Image String 
+  Name String
+}

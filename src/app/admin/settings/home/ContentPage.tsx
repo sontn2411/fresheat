@@ -14,13 +14,17 @@ import AboutUs from '@/components/shared/home/aboutUs'
 import BestSelling from '@/components/shared/home/bestSelling'
 import { setIsLoader } from '@/store/loading'
 import { Menu } from 'lucide-react'
+import { useRouter } from 'next/navigation'
 
 type SortableItemProps = {
   id: number
   children: ReactNode
+  to: string
 }
 
-function SortableItem({ id, children }: SortableItemProps) {
+function SortableItem({ id, children, to }: SortableItemProps) {
+  const router = useRouter()
+
   const {
     attributes,
     listeners,
@@ -43,7 +47,9 @@ function SortableItem({ id, children }: SortableItemProps) {
 
   return (
     <div
-      onClick={() => console.log('======')}
+      onClick={() => {
+        router.push(`home/${to}`)
+      }}
       style={style}
       className='flex justify-between'
     >
@@ -107,6 +113,7 @@ const ContentPage = ({
   return (
     <div className='flex gap-8'>
       <div className='bg-white rounded-lg p-4 max-w-50 w-full h-full'>
+        <h2 className=' text-center font-bold'>Home Page</h2>
         <DndContext
           collisionDetection={closestCenter}
           onDragEnd={handleDragEnd}
@@ -117,8 +124,12 @@ const ContentPage = ({
           >
             {data.map((item) => {
               const name = item.name.replace(/([a-z])([A-Z])/g, '$1 $2')
+              const to = item.name
+                .replace(/([a-z0-9])([A-Z])/g, '$1-$2')
+                .toLowerCase()
+
               return (
-                <SortableItem key={item.id} id={item.id}>
+                <SortableItem key={item.id} id={item.id} to={to}>
                   <span className='cursor-pointer text-sm'>{name}</span>
                 </SortableItem>
               )

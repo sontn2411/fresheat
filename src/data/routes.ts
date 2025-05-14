@@ -9,6 +9,7 @@ const ROUTES = {
       ROOT: `${SETTINGSROOT}/home`,
       BANNER: `${SETTINGSROOT}/home/banner`,
       BESTFOOD: `${SETTINGSROOT}/home/bestfood`,
+      OBOUTUS: `${SETTINGSROOT}/home/aboutUs`,
     },
   },
 }

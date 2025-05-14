@@ -25,6 +25,11 @@ const dataMenu = [
       },
     ],
   },
+  {
+    Id: 3,
+    Name: 'Images',
+    To: '/admin/images',
+  },
 ]
 
 const LayoutAdmin = ({ children }: { children: ReactNode }) => {
